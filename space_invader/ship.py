@@ -1,4 +1,6 @@
 import pygame
+import os
+
 from settings import Settings
 
 class Ship:
@@ -11,6 +13,7 @@ class Ship:
         self.settings = Settings()
 
         # Load the ship image and get its rect.
+        os.chdir('..')
         self.image = pygame.image.load('images/bo_ship.bmp')
         self.image = pygame.transform.scale(self.image, (
             int(self.settings.screen_width/(1/self.settings.ship_proportions)),
