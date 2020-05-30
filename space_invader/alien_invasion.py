@@ -1,12 +1,15 @@
 import sys
 import pygame
 
+from settings import Settings
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
     def __init__(self):
         """Initialize game and create game resources."""
         pygame.init()
+
 
         self.screen = pygame.display.set_mode((1280, 490))
         pygame.display.set_caption("Alien Invasion")
