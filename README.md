@@ -1,3 +1,3 @@
-Alien Invasion Game
+#Alien Invasion Game
 
-First Project :)
+This is my first project :)
