@@ -14,5 +14,12 @@ class Settings:
         self.window_y = 30
 
         # Ship setting
-        self.ship_speed = 1.5
+        self.ship_speed = 6
         self.ship_proportions = 0.05
+
+        # Bullet settings
+        self.bullet_speed = 4
+        self.bullet_width = 3
+        self.bullet_height = 15
+        self.bullet_color = (60, 60, 60)
+        self.bullets_allowed = 6

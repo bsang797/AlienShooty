@@ -19,6 +19,8 @@ class Ship:
                 self.image.get_rect().size[0]*self.image.get_rect().size[1])))
         self.rect = self.image.get_rect()
 
+        self.ship_width = int(self.settings.screen_width / (1 / self.settings.ship_proportions))
+
         # Start each new ship at the bottom center of the screen.
         self.rect.midbottom = self.screen_rect.midbottom
 
