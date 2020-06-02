@@ -147,10 +147,22 @@ class AlienInvasion:
             self.bullets, self.aliens, True, True
         )
 
+        if not self.aliens:
+            # Destroy existing bullets and create new fleets.
+            self.bullets.empty()
+            self._create_fleet()
+            self.settings.alien_speed_multiplier *= self.settings.alien_speed_multiplier
+            self.settings.alien_speed *= self.settings.alien_speed_multiplier
+            self.settings.fleet_drop_speed *= self.settings.alien_speed_multiplier
+
     def _update_aliens(self):
         """Check if the fleet is at an edge, then update position of all aliens in the fleet."""
         self._check_fleet_edges()
         self.aliens.update()
+
+        # Look for alien-ship collisions.
+        if pygame.sprite.spritecollideany(self.ship, self.aliens):
+            print("Ship hit!")
 
     def _update_screen(self):
         """Updates images on the screen, and flip to the new screen."""
