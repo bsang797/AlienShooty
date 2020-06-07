@@ -38,9 +38,6 @@ class AlienInvasion:
 
         self._create_fleet()
 
-        # Load background image
-        self.background = pygame.image.load('images/greece.bmp')
-
     def _create_fleet(self):
         """Create the fleet of aliens."""
         # Create an alien and find the number of aliens in a row.
@@ -167,8 +164,6 @@ class AlienInvasion:
     def _update_screen(self):
         """Updates images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_color)
-        if self.settings.greece_background:
-            self.screen.blit(self.background, (0, 0))
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()

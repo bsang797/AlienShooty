@@ -8,7 +8,6 @@ class Settings:
         self.screen_height = 1010
         self.bg_color = (230, 230, 230)
         self.fullscreen = True
-        self.greece_background = True
 
         # Window position settings
         self.window_x = 0
@@ -28,7 +27,6 @@ class Settings:
         # Alien settings
         self.alien_proportions = 0.05
         self.alien_rand_position = True
-        self.alien_speed_multiplier = 1.1
         self.alien_speed = 1.0
         self.fleet_drop_speed = 10
         # fleet_direction of 1 represents right; -1 represents left.
